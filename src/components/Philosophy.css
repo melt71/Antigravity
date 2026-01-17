@@ -1,0 +1,73 @@
+.philosophy-section {
+    padding: 160px 0;
+    background-color: var(--surface-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.statement {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 80px;
+}
+
+.highlight {
+    color: var(--text-secondary);
+    /* Inverted highlight effect for subtle elegance */
+    font-style: italic;
+    font-family: serif;
+    /* Mixing serif for editorial feel */
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 60px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(180deg, #fff 0%, #666 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}

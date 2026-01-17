@@ -1,0 +1,54 @@
+.features-section {
+    padding: 120px 0;
+    background-color: var(--bg-color);
+}
+
+.section-header {
+    margin-bottom: 80px;
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.feature-card {
+    padding: 40px;
+    background: var(--feature-card-bg);
+    border: 1px solid var(--feature-card-border);
+    border-radius: 4px;
+    /* Slightly squarish for premium feel */
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    background: var(--feature-card-bg-hover);
+    border-color: var(--feature-card-border-hover);
+}
+
+.feature-icon {
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
