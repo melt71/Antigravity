@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Antigravity/static/css/main.6f82fcd5.css",
-    "main.js": "/Antigravity/static/js/main.fe114a5a.js",
+    "main.js": "/Antigravity/static/js/main.b76bca5d.js",
     "index.html": "/Antigravity/index.html",
     "main.6f82fcd5.css.map": "/Antigravity/static/css/main.6f82fcd5.css.map",
-    "main.fe114a5a.js.map": "/Antigravity/static/js/main.fe114a5a.js.map"
+    "main.b76bca5d.js.map": "/Antigravity/static/js/main.b76bca5d.js.map"
   },
   "entrypoints": [
     "static/css/main.6f82fcd5.css",
-    "static/js/main.fe114a5a.js"
+    "static/js/main.b76bca5d.js"
   ]
 }
