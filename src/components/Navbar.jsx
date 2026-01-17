@@ -29,7 +29,7 @@ const Navbar = ({ theme, toggleTheme }) => {
     <nav className="navbar" ref={navRef}>
       <div className="container nav-container">
         <div className="logo">
-          <a href="/">ANTIGRAVITY</a>
+          <a href="#">ANTIGRAVITY</a>
         </div>
 
         <div className={`nav-links ${isOpen ? 'active' : ''}`}>
