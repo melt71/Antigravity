@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Menu, X } from 'lucide-react';
 import gsap from 'gsap';
 import './Navbar.css';
 import Switch from './Toggle';
@@ -7,7 +8,6 @@ const Navbar = ({ theme, toggleTheme }) => {
   const navRef = useRef(null);
   const menuRef = useRef(null);
   const menuLinksRef = useRef(null);
-  const hamburgerRef = useRef(null);
   const [isOpen, setIsOpen] = React.useState(false);
 
   useEffect(() => {
@@ -27,24 +27,9 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const lines = hamburgerRef.current.querySelectorAll('.hamburger-line');
       const menuLinks = menuLinksRef.current.querySelectorAll('.nav-link, .cta-button');
 
       if (isOpen) {
-        // Animate hamburger to X
-        gsap.to(lines[0], {
-          rotation: 45,
-          y: 8,
-          duration: 0.3,
-          ease: "power2.inOut"
-        });
-        gsap.to(lines[1], {
-          rotation: -45,
-          y: -8,
-          duration: 0.3,
-          ease: "power2.inOut"
-        });
-
         // Animate menu in
         gsap.to(menuRef.current, {
           clipPath: 'circle(150% at 100% 0%)',
@@ -68,20 +53,6 @@ const Navbar = ({ theme, toggleTheme }) => {
           }
         );
       } else {
-        // Animate X back to hamburger
-        gsap.to(lines[0], {
-          rotation: 0,
-          y: 0,
-          duration: 0.3,
-          ease: "power2.inOut"
-        });
-        gsap.to(lines[1], {
-          rotation: 0,
-          y: 0,
-          duration: 0.3,
-          ease: "power2.inOut"
-        });
-
         // Animate menu out
         gsap.to(menuRef.current, {
           clipPath: 'circle(0% at 100% 0%)',
@@ -127,10 +98,8 @@ const Navbar = ({ theme, toggleTheme }) => {
             className="menu-toggle"
             onClick={toggleMenu}
             aria-label="Toggle menu"
-            ref={hamburgerRef}
           >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
+            {isOpen ? <X size={24} color="var(--text-primary)" /> : <Menu size={24} color="var(--text-primary)" />}
           </button>
         </div>
       </div>

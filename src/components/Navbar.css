@@ -76,35 +76,6 @@
 
 .menu-toggle {
     display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
-.hamburger-line {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-primary);
-    border-radius: 2px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: background-color 0.3s ease;
-}
-
-.hamburger-line:first-child {
-    top: calc(50% - 4px);
-}
-
-.hamburger-line:last-child {
-    top: calc(50% + 4px);
 }
 
 .mobile-only {
