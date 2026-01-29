@@ -1,0 +1,131 @@
+:root {
+  /* Colors - Premium Dark Theme */
+  --bg-color: #0d0d0d;
+  --text-primary: #ededed;
+  --text-secondary: #888888;
+  --accent-color: #5555ff;
+  --surface-color: #1a1a1a;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  --spacing-2xl: 128px;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+  /* Navbar */
+  --nav-bg: rgba(13, 13, 13, 0.6);
+  --nav-border: rgba(255, 255, 255, 0.05);
+  --btn-border: rgba(255, 255, 255, 0.2);
+
+  /* Hero */
+  --hero-bg: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #0d0d0d 100%);
+  --hero-orb-color: rgba(85, 85, 255, 0.15);
+
+  /* Features */
+  --feature-card-bg: rgba(255, 255, 255, 0.03);
+  --feature-card-border: rgba(255, 255, 255, 0.05);
+  --feature-card-border-hover: rgba(255, 255, 255, 0.1);
+  --feature-card-bg-hover: rgba(255, 255, 255, 0.06);
+
+  /* Project Placeholders */
+  --project-bg-1: #1a1a1a;
+  --project-bg-2: #222222;
+  --project-bg-3: #151515;
+
+  --view-project-btn-bg: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode {
+  --bg-color: #f4f4f5;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --surface-color: #ffffff;
+  --accent-color: #2563eb;
+
+  /* Navbar Light */
+  --nav-bg: rgba(255, 255, 255, 0.7);
+  --nav-border: rgba(0, 0, 0, 0.05);
+  --btn-border: rgba(0, 0, 0, 0.2);
+
+  /* Hero Light */
+  --hero-bg: radial-gradient(circle at 50% 50%, #e4e4e7 0%, #f4f4f5 100%);
+  --hero-orb-color: rgba(37, 99, 235, 0.15);
+
+  /* Features Light */
+  --feature-card-bg: rgba(0, 0, 0, 0.03);
+  --feature-card-border: transparent;
+  /* Clean normally */
+  --feature-card-border-hover: rgba(0, 0, 0, 0.2);
+  --feature-card-bg-hover: rgba(0, 0, 0, 0.05);
+
+  /* Project Placeholders Light */
+  --project-bg-1: #e4e4e7;
+  --project-bg-2: #d4d4d8;
+  --project-bg-3: #f4f4f5;
+
+  --view-project-btn-bg: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Utilities */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

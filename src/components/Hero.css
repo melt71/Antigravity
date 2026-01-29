@@ -1,0 +1,120 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    /* Navbar height */
+}
+
+/* Ambient Background */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--hero-bg);
+    transition: background 0.5s ease;
+}
+
+.hero-orb {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--hero-orb-color) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-30px, 40px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.95;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+.line {
+    overflow: hidden;
+    will-change: transform, opacity;
+    /* For reveal animations if we masked it, currently simple fade/up */
+}
+
+.italic {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--text-secondary);
+}
+
+.hero-footer {
+    max-width: 500px;
+    margin-top: 40px;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--text-secondary);
+    padding-bottom: 2px;
+    border-radius: 0;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+}
