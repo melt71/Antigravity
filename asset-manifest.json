@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Antigravity/static/css/main.fc4f44ea.css",
+    "main.js": "/Antigravity/static/js/main.86ea66df.js",
+    "index.html": "/Antigravity/index.html",
+    "main.fc4f44ea.css.map": "/Antigravity/static/css/main.fc4f44ea.css.map",
+    "main.86ea66df.js.map": "/Antigravity/static/js/main.86ea66df.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc4f44ea.css",
+    "static/js/main.86ea66df.js"
+  ]
+}
